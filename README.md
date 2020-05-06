@@ -1,6 +1,6 @@
 # Demo
 
-Please check the demo [Here](https://soorajdevkn.github.io/nexquare/dist/nexquare/)
+Please check the demo [Here](https://soorajdevkn.github.io/nexquare/dist/nexquare/index.html)
 
 # Nexquare
 
