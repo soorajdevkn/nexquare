@@ -1,3 +1,7 @@
+# Demo
+
+Please check the demo [Here](https://soorajdevkn.github.io/nexquare/dist/nexquare/)
+
 # Nexquare
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.

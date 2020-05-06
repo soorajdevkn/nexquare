@@ -1,0 +1,8 @@
+<div class="row">
+<div class="col-4" *ngFor="let c of components;let i = index">
+    <div class="form-group focused">
+        <label><b>{{c.name}}</b></label>
+        <label class="float-right" (click)="deleteComponent(i)"><b><i class="fa fa-trash"></i></b></label>
+        <input class="form-control" [(ngModel)]="c.value" type="text" placeholder="{{c.name}}" />
+    </div>
+</div> 

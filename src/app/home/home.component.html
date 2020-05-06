@@ -1,0 +1,62 @@
+<div id="app">
+    <home-header></home-header>
+    <home-sidebar></home-sidebar>
+    <div class="has-sidebar-left has-sidebar-tabs vh-100">
+        <!--#navbar-->
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="float-left mt-4">
+                        <h2><b>Component Configuration</b></h2>
+                        <label>Curriculum / <b>Component Configuration</b></label>
+                    </div>
+                    <div class="float-right mt-4">
+                        <button (click)="addComponent()" class="btn btn-danger btn-lg btn-block"><i
+                                class="fa fa-plus"></i><span class="ml-2">Add Component</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                   <home-general-settings></home-general-settings>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12">
+                    <div class="card no-b shadow p-4">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4><b>Component</b></h4>
+                            </div>
+                        </div>
+                        <home-component [components]="components" (onDelete)="onDelete($event)"></home-component>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="myModal" *ngIf="showModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="m-5">
+                    <div class="text-center">
+                        <img src="assets/img/cross.png" class="img w-15 m-5" alt="">
+                        <h1>Are you sure</h1>
+                        <h1>You want delete component?</h1>
+                    </div>
+                    <div class="row mt-5">
+                        <div class="col-6">
+                            <button class="btn btn-lg btn-block" (click)="closeModal(false)">No, Cancel it</button>
+                        </div>
+                        <div class="col-6">
+                            <button class="btn btn-danger btn-lg btn-block" (click)="closeModal(true)">Delete Component</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
